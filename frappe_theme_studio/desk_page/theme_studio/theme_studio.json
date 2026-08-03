@@ -1,0 +1,52 @@
+{
+  "content": "",
+  "creation": "2026-08-03 23:00:00.000000",
+  "docstatus": 0,
+  "doctype": "Desk Page",
+  "for_user": "",
+  "icon": "color",
+  "idx": 0,
+  "is_standard": 1,
+  "label": "Theme Studio",
+  "modified": "2026-08-03 23:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Frappe Theme Studio",
+  "name": "theme-studio",
+  "owner": "Administrator",
+  "pin_to_bottom": 0,
+  "pin_to_top": 0,
+  "restrict_to_domain": "",
+  "roles": [],
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "icon": "color",
+      "label": "Theme Profiles",
+      "link_to": "Theme Profile",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "icon": "settings",
+      "label": "Assignments",
+      "link_to": "Theme Assignment",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "icon": "tool",
+      "label": "Settings",
+      "link_to": "Theme Studio Settings",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "icon": "edit",
+      "label": "Open Editor",
+      "link_to": "theme-studio-editor",
+      "type": "Page"
+    }
+  ],
+  "shortcuts_label": "Quick Links",
+  "title": "Theme Studio"
+}

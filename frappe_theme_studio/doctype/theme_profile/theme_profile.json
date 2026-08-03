@@ -1,0 +1,510 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:profile_name",
+  "creation": "2026-08-03 23:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "profile_name",
+    "is_default",
+    "is_system_preset",
+    "sb_design",
+    "design_system",
+    "base_preset",
+    "sb_colors",
+    "brand_color",
+    "accent_color",
+    "page_background",
+    "card_background",
+    "text_color",
+    "link_color",
+    "border_color",
+    "sb_navbar",
+    "navbar_background",
+    "navbar_text_color",
+    "navbar_icon_color",
+    "navbar_active_color",
+    "navbar_hover_color",
+    "sidebar_width",
+    "sidebar_mode",
+    "auto_collapse_sidebar",
+    "logo_placement",
+    "sb_typography",
+    "font_family",
+    "base_font_size",
+    "heading_font_size",
+    "label_font_size",
+    "table_font_size",
+    "font_weight",
+    "line_height",
+    "sb_layout",
+    "layout_mode",
+    "page_margin",
+    "card_gap",
+    "global_border_radius",
+    "header_height",
+    "sticky_regions",
+    "sb_components",
+    "button_style",
+    "input_style",
+    "checkbox_style",
+    "table_density",
+    "card_shadow",
+    "card_surface",
+    "sb_login",
+    "login_logo",
+    "login_background_type",
+    "login_background_image",
+    "login_background_gradient",
+    "login_card_opacity",
+    "login_title",
+    "login_subtitle",
+    "login_footer",
+    "show_platform_credit",
+    "sb_accessibility",
+    "wcag_compliance",
+    "high_contrast",
+    "large_text",
+    "focus_outline",
+    "color_blind_palette",
+    "sb_advanced",
+    "custom_css",
+    "custom_js",
+    "css_variables",
+    "raw_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "profile_name",
+      "fieldtype": "Data",
+      "label": "Profile Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "is_default",
+      "fieldtype": "Check",
+      "label": "Is Default",
+      "default": 0
+    },
+    {
+      "fieldname": "is_system_preset",
+      "fieldtype": "Check",
+      "label": "System Preset",
+      "read_only": 1,
+      "default": 0
+    },
+    {
+      "fieldname": "sb_design",
+      "fieldtype": "Section Break",
+      "label": "Design System"
+    },
+    {
+      "fieldname": "design_system",
+      "fieldtype": "Select",
+      "label": "Design System",
+      "options": "Frappe Default\\nFrappe v15+ (Vue)\\nCustom",
+      "default": "Frappe Default"
+    },
+    {
+      "fieldname": "base_preset",
+      "fieldtype": "Select",
+      "label": "Base Preset",
+      "options": "\\nLight\\nDark\\nHigh Contrast\\nFrappe Default\\nForest\\nMidnight\\nPlum",
+      "default": "Frappe Default"
+    },
+    {
+      "fieldname": "sb_colors",
+      "fieldtype": "Section Break",
+      "label": "Colors"
+    },
+    {
+      "fieldname": "brand_color",
+      "fieldtype": "Color",
+      "label": "Brand Color"
+    },
+    {
+      "fieldname": "accent_color",
+      "fieldtype": "Color",
+      "label": "Accent Color"
+    },
+    {
+      "fieldname": "page_background",
+      "fieldtype": "Color",
+      "label": "Page Background"
+    },
+    {
+      "fieldname": "card_background",
+      "fieldtype": "Color",
+      "label": "Card Background"
+    },
+    {
+      "fieldname": "text_color",
+      "fieldtype": "Color",
+      "label": "Text Color"
+    },
+    {
+      "fieldname": "link_color",
+      "fieldtype": "Color",
+      "label": "Link Color"
+    },
+    {
+      "fieldname": "border_color",
+      "fieldtype": "Color",
+      "label": "Border Color"
+    },
+    {
+      "fieldname": "sb_navbar",
+      "fieldtype": "Section Break",
+      "label": "Navbar & Sidebar"
+    },
+    {
+      "fieldname": "navbar_background",
+      "fieldtype": "Color",
+      "label": "Navbar Background"
+    },
+    {
+      "fieldname": "navbar_text_color",
+      "fieldtype": "Color",
+      "label": "Navbar Text Color"
+    },
+    {
+      "fieldname": "navbar_icon_color",
+      "fieldtype": "Color",
+      "label": "Navbar Icon Color"
+    },
+    {
+      "fieldname": "navbar_active_color",
+      "fieldtype": "Color",
+      "label": "Navbar Active Color"
+    },
+    {
+      "fieldname": "navbar_hover_color",
+      "fieldtype": "Color",
+      "label": "Navbar Hover Color"
+    },
+    {
+      "fieldname": "sidebar_width",
+      "fieldtype": "Int",
+      "label": "Sidebar Width (px)",
+      "default": 240
+    },
+    {
+      "fieldname": "sidebar_mode",
+      "fieldtype": "Select",
+      "label": "Sidebar Mode",
+      "options": "Expanded\\nCollapsed\\nAuto",
+      "default": "Expanded"
+    },
+    {
+      "fieldname": "auto_collapse_sidebar",
+      "fieldtype": "Check",
+      "label": "Auto Collapse Sidebar",
+      "default": 0
+    },
+    {
+      "fieldname": "logo_placement",
+      "fieldtype": "Select",
+      "label": "Logo Placement",
+      "options": "Navbar\\nSidebar\\nBoth",
+      "default": "Sidebar"
+    },
+    {
+      "fieldname": "sb_typography",
+      "fieldtype": "Section Break",
+      "label": "Typography"
+    },
+    {
+      "fieldname": "font_family",
+      "fieldtype": "Data",
+      "label": "Font Family",
+      "default": "Inter, sans-serif"
+    },
+    {
+      "fieldname": "base_font_size",
+      "fieldtype": "Int",
+      "label": "Base Font Size (px)",
+      "default": 14
+    },
+    {
+      "fieldname": "heading_font_size",
+      "fieldtype": "Int",
+      "label": "Heading Font Size (px)",
+      "default": 24
+    },
+    {
+      "fieldname": "label_font_size",
+      "fieldtype": "Int",
+      "label": "Label Font Size (px)",
+      "default": 12
+    },
+    {
+      "fieldname": "table_font_size",
+      "fieldtype": "Int",
+      "label": "Table Font Size (px)",
+      "default": 13
+    },
+    {
+      "fieldname": "font_weight",
+      "fieldtype": "Select",
+      "label": "Font Weight",
+      "options": "300\\n400\\n500\\n600\\n700",
+      "default": "400"
+    },
+    {
+      "fieldname": "line_height",
+      "fieldtype": "Float",
+      "label": "Line Height",
+      "default": 1.5
+    },
+    {
+      "fieldname": "sb_layout",
+      "fieldtype": "Section Break",
+      "label": "Layout"
+    },
+    {
+      "fieldname": "layout_mode",
+      "fieldtype": "Select",
+      "label": "Layout Mode",
+      "options": "Full Width\\nBoxed",
+      "default": "Full Width"
+    },
+    {
+      "fieldname": "page_margin",
+      "fieldtype": "Int",
+      "label": "Page Margin (px)",
+      "default": 24
+    },
+    {
+      "fieldname": "card_gap",
+      "fieldtype": "Int",
+      "label": "Card Gap (px)",
+      "default": 16
+    },
+    {
+      "fieldname": "global_border_radius",
+      "fieldtype": "Int",
+      "label": "Global Border Radius (px)",
+      "default": 8
+    },
+    {
+      "fieldname": "header_height",
+      "fieldtype": "Int",
+      "label": "Header Height (px)",
+      "default": 48
+    },
+    {
+      "fieldname": "sticky_regions",
+      "fieldtype": "Check",
+      "label": "Sticky Regions",
+      "default": 1
+    },
+    {
+      "fieldname": "sb_components",
+      "fieldtype": "Section Break",
+      "label": "Components"
+    },
+    {
+      "fieldname": "button_style",
+      "fieldtype": "Select",
+      "label": "Button Style",
+      "options": "Rounded\\nPill\\nSquare",
+      "default": "Rounded"
+    },
+    {
+      "fieldname": "input_style",
+      "fieldtype": "Select",
+      "label": "Input Style",
+      "options": "Outline\\nFilled\\nFlushed",
+      "default": "Outline"
+    },
+    {
+      "fieldname": "checkbox_style",
+      "fieldtype": "Select",
+      "label": "Checkbox Style",
+      "options": "Default\\nSwitch\\nCustom",
+      "default": "Default"
+    },
+    {
+      "fieldname": "table_density",
+      "fieldtype": "Select",
+      "label": "Table Density",
+      "options": "Comfortable\\nCompact",
+      "default": "Comfortable"
+    },
+    {
+      "fieldname": "card_shadow",
+      "fieldtype": "Select",
+      "label": "Card Shadow",
+      "options": "None\\nSmall\\nMedium\\nLarge",
+      "default": "Medium"
+    },
+    {
+      "fieldname": "card_surface",
+      "fieldtype": "Select",
+      "label": "Card Surface",
+      "options": "Flat\\nElevated\\nGlass",
+      "default": "Elevated"
+    },
+    {
+      "fieldname": "sb_login",
+      "fieldtype": "Section Break",
+      "label": "Login Page"
+    },
+    {
+      "fieldname": "login_logo",
+      "fieldtype": "Attach Image",
+      "label": "Login Logo"
+    },
+    {
+      "fieldname": "login_background_type",
+      "fieldtype": "Select",
+      "label": "Background Type",
+      "options": "Color\\nImage\\nGradient",
+      "default": "Color"
+    },
+    {
+      "fieldname": "login_background_image",
+      "fieldtype": "Attach Image",
+      "label": "Background Image"
+    },
+    {
+      "fieldname": "login_background_gradient",
+      "fieldtype": "Data",
+      "label": "Background Gradient (CSS)"
+    },
+    {
+      "fieldname": "login_card_opacity",
+      "fieldtype": "Float",
+      "label": "Card Opacity",
+      "default": 1.0
+    },
+    {
+      "fieldname": "login_title",
+      "fieldtype": "Data",
+      "label": "Login Title"
+    },
+    {
+      "fieldname": "login_subtitle",
+      "fieldtype": "Data",
+      "label": "Login Subtitle"
+    },
+    {
+      "fieldname": "login_footer",
+      "fieldtype": "Text",
+      "label": "Login Footer"
+    },
+    {
+      "fieldname": "show_platform_credit",
+      "fieldtype": "Check",
+      "label": "Show Platform Credit",
+      "default": 1
+    },
+    {
+      "fieldname": "sb_accessibility",
+      "fieldtype": "Section Break",
+      "label": "Accessibility"
+    },
+    {
+      "fieldname": "wcag_compliance",
+      "fieldtype": "Select",
+      "label": "WCAG Compliance",
+      "options": "None\\nAA\\nAAA",
+      "default": "AA"
+    },
+    {
+      "fieldname": "high_contrast",
+      "fieldtype": "Check",
+      "label": "High Contrast Mode",
+      "default": 0
+    },
+    {
+      "fieldname": "large_text",
+      "fieldtype": "Check",
+      "label": "Large Text Mode",
+      "default": 0
+    },
+    {
+      "fieldname": "focus_outline",
+      "fieldtype": "Check",
+      "label": "Enhanced Focus Outlines",
+      "default": 1
+    },
+    {
+      "fieldname": "color_blind_palette",
+      "fieldtype": "Select",
+      "label": "Color Blind Palette",
+      "options": "None\\nDeuteranopia\\nProtanopia\\nTritanopia",
+      "default": "None"
+    },
+    {
+      "fieldname": "sb_advanced",
+      "fieldtype": "Section Break",
+      "label": "Developer Options"
+    },
+    {
+      "fieldname": "custom_css",
+      "fieldtype": "Code",
+      "label": "Custom CSS",
+      "options": "CSS"
+    },
+    {
+      "fieldname": "custom_js",
+      "fieldtype": "Code",
+      "label": "Custom JS",
+      "options": "JS"
+    },
+    {
+      "fieldname": "css_variables",
+      "fieldtype": "Code",
+      "label": "CSS Variables (JSON)",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "raw_json",
+      "fieldtype": "Code",
+      "label": "Raw Theme JSON",
+      "options": "JSON"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-08-03 23:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Frappe Theme Studio",
+  "name": "Theme Profile",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 0,
+      "delete": 0,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "All",
+      "share": 0,
+      "write": 0
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}

@@ -1,0 +1,41 @@
+
+:root {
+    --theme-brand-color: var(--brand-color, #171717);
+    --theme-accent-color: var(--accent-color, #2490EF);
+    --theme-page-bg: var(--page-background, #f4f5f6);
+    --theme-card-bg: var(--card-background, #ffffff);
+    --theme-text-color: var(--text-color, #1f272e);
+    --theme-sidebar-width: var(--sidebar-width, 240px);
+    --theme-font-family: var(--font-family, "Inter", "Helvetica Neue", sans-serif);
+    --theme-base-size: var(--base-font-size, 14px);
+    --theme-radius: var(--global-border-radius, 8px);
+    --theme-header-height: var(--header-height, 48px);
+}
+body {
+    font-family: var(--theme-font-family) !important;
+    font-size: var(--theme-base-size) !important;
+    background-color: var(--theme-page-bg) !important;
+    color: var(--theme-text-color) !important;
+}
+.layout-main-section {
+    background-color: var(--theme-card-bg) !important;
+    border-radius: var(--theme-radius) !important;
+}
+.navbar {
+    background-color: var(--theme-navbar-background, #ffffff) !important;
+    height: var(--theme-header-height) !important;
+}
+.btn-primary {
+    background-color: var(--theme-brand-color) !important;
+    border-color: var(--theme-brand-color) !important;
+}
+body[data-high-contrast="true"] {
+    --theme-page-bg: #000 !important;
+    --theme-card-bg: #000 !important;
+    --theme-text-color: #fff !important;
+}
+body[data-large-text="true"] { --theme-base-size: 18px !important; }
+body[data-focus-outline="true"] *:focus {
+    outline: 3px solid var(--theme-accent-color) !important;
+    outline-offset: 2px !important;
+}

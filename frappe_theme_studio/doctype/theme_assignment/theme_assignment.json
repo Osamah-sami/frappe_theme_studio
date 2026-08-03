@@ -1,0 +1,101 @@
+{
+  "actions": [],
+  "creation": "2026-08-03 23:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "assignment_type",
+    "theme_profile",
+    "user",
+    "role",
+    "company",
+    "is_active",
+    "schedule_from",
+    "schedule_to",
+    "priority"
+  ],
+  "fields": [
+    {
+      "fieldname": "assignment_type",
+      "fieldtype": "Select",
+      "label": "Assignment Type",
+      "options": "Site\\nUser\\nRole\\nCompany",
+      "reqd": 1
+    },
+    {
+      "fieldname": "theme_profile",
+      "fieldtype": "Link",
+      "label": "Theme Profile",
+      "options": "Theme Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "label": "User",
+      "options": "User",
+      "depends_on": "eval:doc.assignment_type=='User'"
+    },
+    {
+      "fieldname": "role",
+      "fieldtype": "Link",
+      "label": "Role",
+      "options": "Role",
+      "depends_on": "eval:doc.assignment_type=='Role'"
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "depends_on": "eval:doc.assignment_type=='Company'"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": 1
+    },
+    {
+      "fieldname": "schedule_from",
+      "fieldtype": "Datetime",
+      "label": "Schedule From"
+    },
+    {
+      "fieldname": "schedule_to",
+      "fieldtype": "Datetime",
+      "label": "Schedule To"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "default": 0
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-08-03 23:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Frappe Theme Studio",
+  "name": "Theme Assignment",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}

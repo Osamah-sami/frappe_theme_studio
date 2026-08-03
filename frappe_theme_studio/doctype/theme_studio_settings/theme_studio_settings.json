@@ -1,0 +1,101 @@
+{
+  "actions": [],
+  "creation": "2026-08-03 23:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "general_section",
+    "enable_theme_studio",
+    "admin_lock",
+    "allow_user_customization",
+    "default_profile",
+    "preview_section",
+    "enable_live_preview",
+    "advanced_section",
+    "enable_custom_js",
+    "enable_raw_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "general_section",
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "fieldname": "enable_theme_studio",
+      "fieldtype": "Check",
+      "label": "Enable Theme Studio",
+      "default": 1
+    },
+    {
+      "fieldname": "admin_lock",
+      "fieldtype": "Check",
+      "label": "Admin Lock",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_user_customization",
+      "fieldtype": "Check",
+      "label": "Allow User Customization",
+      "default": 1
+    },
+    {
+      "fieldname": "default_profile",
+      "fieldtype": "Link",
+      "label": "Default Profile",
+      "options": "Theme Profile"
+    },
+    {
+      "fieldname": "preview_section",
+      "fieldtype": "Section Break",
+      "label": "Preview"
+    },
+    {
+      "fieldname": "enable_live_preview",
+      "fieldtype": "Check",
+      "label": "Enable Live Preview",
+      "default": 1
+    },
+    {
+      "fieldname": "advanced_section",
+      "fieldtype": "Section Break",
+      "label": "Advanced"
+    },
+    {
+      "fieldname": "enable_custom_js",
+      "fieldtype": "Check",
+      "label": "Enable Custom JS",
+      "default": 0
+    },
+    {
+      "fieldname": "enable_raw_json",
+      "fieldtype": "Check",
+      "label": "Enable Raw JSON",
+      "default": 0
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2026-08-03 23:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Frappe Theme Studio",
+  "name": "Theme Studio Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
