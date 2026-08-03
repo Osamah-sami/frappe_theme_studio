@@ -15,7 +15,7 @@ Visual drag-and-drop theme editor for Frappe/ERPNext built on the native Frappe 
 ## Installation
 
 ```bash
-bench get-app https://github.com/yourusername/frappe-theme-studio
+bench get-app https://github.com/Osamah-sami/frappe-theme-studio
 bench --site yoursite.com install-app frappe_theme_studio
 bench build --app frappe_theme_studio
 bench restart
