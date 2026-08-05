@@ -105,15 +105,15 @@
       "fieldname": "design_system",
       "fieldtype": "Select",
       "label": "Design System",
-      "options": "Frappe Default\\nFrappe v15+ (Vue)\\nCustom",
+      "options": "Frappe Default\nFrappe v15+ (Vue)\nCustom",
       "default": "Frappe Default"
     },
     {
       "fieldname": "base_preset",
       "fieldtype": "Select",
       "label": "Base Preset",
-      "options": "\\nLight\\nDark\\nHigh Contrast\\nFrappe Default\\nForest\\nMidnight\\nPlum",
-      "default": "Frappe Default"
+      "options": "\nLight\nDark\nHigh Contrast\nFrappe Default\nFrappe v16 (Espresso)\nBlue Ocean\nOrange Sunset\nForest\nMidnight\nPlum",
+      "default": "Frappe v16 (Espresso)"
     },
     {
       "fieldname": "sb_colors",
@@ -195,7 +195,7 @@
       "fieldname": "sidebar_mode",
       "fieldtype": "Select",
       "label": "Sidebar Mode",
-      "options": "Expanded\\nCollapsed\\nAuto",
+      "options": "Expanded\nCollapsed\nAuto",
       "default": "Expanded"
     },
     {
@@ -208,7 +208,7 @@
       "fieldname": "logo_placement",
       "fieldtype": "Select",
       "label": "Logo Placement",
-      "options": "Navbar\\nSidebar\\nBoth",
+      "options": "Navbar\nSidebar\nBoth",
       "default": "Sidebar"
     },
     {
@@ -250,7 +250,7 @@
       "fieldname": "font_weight",
       "fieldtype": "Select",
       "label": "Font Weight",
-      "options": "300\\n400\\n500\\n600\\n700",
+      "options": "300\n400\n500\n600\n700",
       "default": "400"
     },
     {
@@ -268,7 +268,7 @@
       "fieldname": "layout_mode",
       "fieldtype": "Select",
       "label": "Layout Mode",
-      "options": "Full Width\\nBoxed",
+      "options": "Full Width\nBoxed",
       "default": "Full Width"
     },
     {
@@ -310,42 +310,42 @@
       "fieldname": "button_style",
       "fieldtype": "Select",
       "label": "Button Style",
-      "options": "Rounded\\nPill\\nSquare",
+      "options": "Rounded\nPill\nSquare",
       "default": "Rounded"
     },
     {
       "fieldname": "input_style",
       "fieldtype": "Select",
       "label": "Input Style",
-      "options": "Outline\\nFilled\\nFlushed",
+      "options": "Outline\nFilled\nFlushed",
       "default": "Outline"
     },
     {
       "fieldname": "checkbox_style",
       "fieldtype": "Select",
       "label": "Checkbox Style",
-      "options": "Default\\nSwitch\\nCustom",
+      "options": "Default\nSwitch\nCustom",
       "default": "Default"
     },
     {
       "fieldname": "table_density",
       "fieldtype": "Select",
       "label": "Table Density",
-      "options": "Comfortable\\nCompact",
+      "options": "Comfortable\nCompact",
       "default": "Comfortable"
     },
     {
       "fieldname": "card_shadow",
       "fieldtype": "Select",
       "label": "Card Shadow",
-      "options": "None\\nSmall\\nMedium\\nLarge",
+      "options": "None\nSmall\nMedium\nLarge",
       "default": "Medium"
     },
     {
       "fieldname": "card_surface",
       "fieldtype": "Select",
       "label": "Card Surface",
-      "options": "Flat\\nElevated\\nGlass",
+      "options": "Flat\nElevated\nGlass",
       "default": "Elevated"
     },
     {
@@ -362,7 +362,7 @@
       "fieldname": "login_background_type",
       "fieldtype": "Select",
       "label": "Background Type",
-      "options": "Color\\nImage\\nGradient",
+      "options": "Color\nImage\nGradient",
       "default": "Color"
     },
     {
@@ -411,7 +411,7 @@
       "fieldname": "wcag_compliance",
       "fieldtype": "Select",
       "label": "WCAG Compliance",
-      "options": "None\\nAA\\nAAA",
+      "options": "None\nAA\nAAA",
       "default": "AA"
     },
     {
@@ -436,7 +436,7 @@
       "fieldname": "color_blind_palette",
       "fieldtype": "Select",
       "label": "Color Blind Palette",
-      "options": "None\\nDeuteranopia\\nProtanopia\\nTritanopia",
+      "options": "None\nDeuteranopia\nProtanopia\nTritanopia",
       "default": "None"
     },
     {

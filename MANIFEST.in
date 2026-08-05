@@ -1,4 +1,6 @@
-include frappe_theme_studio/public/**/*
-include frappe_theme_studio/templates/**/*
-include frappe_theme_studio/www/**/*
-recursive-include frappe_theme_studio *.json *.md *.txt *.csv
+include frappe_theme_studio/public/images/*
+recursive-include frappe_theme_studio/public/images *.png
+recursive-include frappe_theme_studio/public/js *.js
+recursive-include frappe_theme_studio/public/css *.css
+recursive-include frappe_theme_studio *.json
+recursive-include frappe_theme_studio *.html

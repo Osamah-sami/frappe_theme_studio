@@ -4,7 +4,7 @@ import json
 
 @frappe.whitelist()
 def get_profiles():
-    return frappe.get_all("Theme Profile", fields=["name", "profile_name", "is_default", "base_preset", "modified"])
+    return frappe.get_all("Theme Profile", fields=["name", "profile_name", "is_default", "is_system_preset", "base_preset", "brand_color", "accent_color", "modified"])
 
 @frappe.whitelist()
 def get_profile(name):
@@ -46,7 +46,42 @@ def get_active_theme_css():
         css = doc.generate_css()
         frappe.cache().set_value(f"theme_studio:css:{profile_name}", css)
     doc = frappe.get_doc("Theme Profile", profile_name)
-    return {"css": css, "variables": doc.get_css_variables()}
+    return {"css": css, "variables": doc.get_css_variables(), "profile_name": profile_name}
+
+@frappe.whitelist()
+def get_active_theme():
+    """Get currently active theme name for current user"""
+    profile_name = frappe.cache().get_value("theme_studio:active_profile")
+    if not profile_name: profile_name = get_profile_for_user(frappe.session.user)
+    if not profile_name:
+        settings = frappe.get_doc("Theme Studio Settings")
+        if settings.default_profile: profile_name = settings.default_profile
+    if profile_name:
+        doc = frappe.get_doc("Theme Profile", profile_name)
+        return {
+            "name": doc.name,
+            "profile_name": doc.profile_name,
+            "brand_color": doc.brand_color,
+            "accent_color": doc.accent_color,
+            "is_system_preset": doc.is_system_preset,
+            "base_preset": doc.base_preset
+        }
+    return None
+
+@frappe.whitelist()
+def set_active_theme(profile_name):
+    """Set a theme as active (site-wide)"""
+    if not frappe.has_permission("Theme Profile", "write"):
+        frappe.throw(_("Not permitted"))
+    if not frappe.db.exists("Theme Profile", profile_name):
+        frappe.throw(_("Theme Profile not found"))
+
+    doc = frappe.get_doc("Theme Profile", profile_name)
+    css = doc.generate_css()
+    frappe.cache().set_value("theme_studio:active_profile", profile_name)
+    frappe.cache().set_value(f"theme_studio:css:{profile_name}", css)
+    frappe.publish_realtime('theme_studio:refresh', {}, after_commit=True)
+    return {"success": True, "profile": profile_name, "profile_name": doc.profile_name}
 
 @frappe.whitelist()
 def duplicate_profile(source, new_name):
@@ -86,3 +121,24 @@ def create_theme_backup(profile_name):
     })
     backup.insert(ignore_permissions=True)
     frappe.db.commit()
+
+@frappe.whitelist()
+def reset_to_preset(profile_name, preset_name):
+    from frappe_theme_studio.presets import get_system_presets
+    presets = get_system_presets()
+    if preset_name not in presets:
+        frappe.throw(f"Preset '{preset_name}' not found")
+    doc = frappe.get_doc("Theme Profile", profile_name)
+    if doc.is_system_preset:
+        frappe.throw("Cannot reset System Presets")
+    data = presets[preset_name]
+    for key, value in data.items():
+        if hasattr(doc, key) and key not in ["name", "creation", "modified", "modified_by", "owner", "profile_name"]:
+            setattr(doc, key, value)
+    doc.save(ignore_permissions=True)
+    return {"success": True, "profile": profile_name}
+
+@frappe.whitelist()
+def get_preset_list():
+    from frappe_theme_studio.presets import get_system_presets
+    return list(get_system_presets().keys())

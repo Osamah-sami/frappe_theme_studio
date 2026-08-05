@@ -20,7 +20,7 @@
       "fieldname": "assignment_type",
       "fieldtype": "Select",
       "label": "Assignment Type",
-      "options": "Site\\nUser\\nRole\\nCompany",
+      "options": "Site\nUser\nRole\nCompany",
       "reqd": 1
     },
     {

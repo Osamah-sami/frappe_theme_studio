@@ -2,14 +2,14 @@
   "creation": "2026-08-03 23:00:00.000000",
   "docstatus": 0,
   "doctype": "Page",
-  "icon": "color",
+  "icon": "layout",
   "idx": 0,
   "modified": "2026-08-03 23:00:00.000000",
   "modified_by": "Administrator",
   "module": "Frappe Theme Studio",
-  "name": "theme-studio-editor",
+  "name": "theme-studio-gallery",
   "owner": "Administrator",
-  "page_name": "theme-studio-editor",
+  "page_name": "theme-studio-gallery",
   "roles": [
     {
       "role": "System Manager"
@@ -19,5 +19,5 @@
   "standard": "Yes",
   "style": null,
   "system_page": 0,
-  "title": "Theme Studio"
+  "title": "Theme Gallery"
 }

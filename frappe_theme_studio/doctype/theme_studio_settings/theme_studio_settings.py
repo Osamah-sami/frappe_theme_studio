@@ -1,3 +1,5 @@
 import frappe
 from frappe.model.document import Document
-class ThemeStudioSettings(Document): pass
+
+class ThemeStudioSettings(Document):
+    pass

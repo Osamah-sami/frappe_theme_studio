@@ -5,11 +5,23 @@ class ThemeProfile(Document):
     def validate(self):
         if self.is_default:
             frappe.db.sql("UPDATE `tabTheme Profile` SET is_default = 0 WHERE name != %s", self.name)
-    def on_update(self): self.clear_theme_cache()
-    def on_trash(self): self.clear_theme_cache()
+
+    def before_rename(self, old_name, new_name, merge=False):
+        if frappe.db.get_value("Theme Profile", old_name, "is_system_preset"):
+            frappe.throw("Cannot rename System Presets")
+
+    def on_trash(self):
+        if self.is_system_preset:
+            frappe.throw("Cannot delete System Presets. Duplicate it instead.")
+        self.clear_theme_cache()
+
+    def on_update(self):
+        self.clear_theme_cache()
+
     def clear_theme_cache(self):
         frappe.cache().delete_key("theme_studio:active_profile")
         frappe.cache().delete_key(f"theme_studio:profile:{self.name}")
+
     def get_css_variables(self):
         variables = {
             "--brand-color": self.brand_color or "#171717",
@@ -28,9 +40,12 @@ class ThemeProfile(Document):
             "--header-height": f"{self.header_height or 48}px",
         }
         if self.css_variables:
-            try: variables.update(frappe.parse_json(self.css_variables))
-            except: pass
+            try:
+                variables.update(frappe.parse_json(self.css_variables))
+            except:
+                pass
         return variables
+
     def generate_css(self):
         vars_css = "\n".join([f"{k}: {v};" for k, v in self.get_css_variables().items()])
         return f"""
