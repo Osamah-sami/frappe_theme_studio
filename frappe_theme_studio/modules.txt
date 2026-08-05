@@ -1,1 +1,1 @@
-Frappe Theme Studio
+frappe_theme_studio
