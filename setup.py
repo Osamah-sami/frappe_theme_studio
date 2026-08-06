@@ -9,5 +9,6 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
-    install_requires=[]
+    install_requires=['frappe>=16.0.0,<17'],
+    python_requires='>=3.11'
 )

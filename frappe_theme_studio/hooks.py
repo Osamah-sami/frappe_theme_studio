@@ -4,6 +4,7 @@ app_publisher = "Your Name"
 app_description = "Visual Theme Studio for Frappe/ERPNext"
 app_email = "your@email.com"
 app_license = "MIT"
+app_version = "1.0.0"
 
 # App branding
 app_logo_url = "/assets/frappe_theme_studio/images/app_logo.png"

@@ -5,8 +5,8 @@ Visual drag-and-drop theme editor for Frappe/ERPNext built on the native Frappe 
 ## Requirements
 
 - **Frappe Framework >= v16.0.0**
-- Python >= 3.14
-- NodeJS >= 24
+- Python: تأكد من تثبيت نسخة Python المدعومة من قِبل Frappe v16 (عادةً Python 3.11+ — راجع توثيق Frappe الرسمي)
+- NodeJS: تأكد من تثبيت نسخة Node المدعومة من قِبل أدوات البناء المستخدمة (راجع توثيق bench/Frappe)
 
 > **Note for v16:** Desk Page has been removed in Frappe v16. After installation, manually create a Workspace and add shortcuts to "Theme Gallery" and "Theme Editor" pages.
 
