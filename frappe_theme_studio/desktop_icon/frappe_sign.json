@@ -1,0 +1,35 @@
+{
+ "app": "frappe_theme_studio",
+ "bg_color": "gray",
+ "creation": "2026-07-07 10:48:58.020130",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 0,
+ "label": "frappe theme studio",
+ "link_to": "Frappe Sign",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/frappe_theme_studio/desktop_icons/frappe_theme_studio_icon.png",
+ "modified": "2026-07-08 09:48:47.439212",
+ "modified_by": "Administrator",
+ "name": "Frappe Sign",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Frappe Sign Manager"
+  },
+  {
+   "role": "Frappe Sign Sender"
+  },
+  {
+   "role": "Frappe Sign User"
+  }
+ ],
+ "sidebar": "Frappe Sign",
+ "standard": 1
+}
